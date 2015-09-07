@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "coffee -c `find {./lib,./index.coffee} -type f -name '*.coffee'`"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,5 @@
   "homepage": "https://github.com/restman/restman-errors#readme",
   "dependencies": {
     "lodash": "^3.10.1"
-  },
-  "devDependencies": {
-    "coffee-script": "1.9.3",
-    "mocha": "2.2.5",
-    "should": "7.0.1"
-  },
+  }
 }
