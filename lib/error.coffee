@@ -1,6 +1,6 @@
 class RestError extends Error
 
-  constructor: (@name = 'Internal', @statusCode = 500)->
+  constructor: (@name = 'Internal', @status_code = 500)->
     @errors = []
     Error.captureStackTrace @, @
     return this
