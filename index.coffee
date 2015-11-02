@@ -1,1 +1,1 @@
-module.exports = require './lib/errors'
+module.exports = require './lib'

@@ -1,5 +1,5 @@
 errors = require '../'
 
-error = errors.BadRequest 'BadRequest message', 'resource', 'field'
+error = errors.BadRequest 'resource', 'field', 'code', 'message'
 
 console.log error
