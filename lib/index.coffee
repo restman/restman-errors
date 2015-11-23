@@ -24,8 +24,8 @@ restErrors.parseJoi = (resource, joiError) ->
   return unless resource
   restError = new RestError 'Invalid', 422
   _.each joiError.details, (detail) ->
-    path = detail.path.replace(/\d+/g, 'item') if _.isString(detail.path)
-    restError.add resource, path, 'invalid', detail.message
+    detail.path = detail.path.replace(/\d+/g, 'item') if _.isString(detail.path)
+    restError.add resource, detail.path, 'invalid', detail.message
   restError
 
 restErrors.RestError = RestError
